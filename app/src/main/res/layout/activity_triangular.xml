@@ -49,7 +49,7 @@
                         android:id="@+id/imageView2"
                         android:layout_width="216dp"
                         android:layout_height="150dp"
-                        app:srcCompat="@drawable/cubo_v" />
+                        app:srcCompat="@drawable/prisma_triangular_v" />
 
                     <LinearLayout
                         android:layout_width="131dp"
@@ -72,7 +72,7 @@
                             android:layout_height="29dp"
                             android:fontFamily="casual"
                             android:gravity="center"
-                            android:text="@string/formula_area_cubo"
+                            android:text="@string/formula_area_triangular"
                             android:textColor="@color/black" />
 
                         <TextView
@@ -91,7 +91,7 @@
                             android:layout_height="30dp"
                             android:fontFamily="casual"
                             android:gravity="center"
-                            android:text="@string/formula_volumen_cubo"
+                            android:text="@string/formula_volumen_triangular"
                             android:textColor="@color/black" />
 
                     </LinearLayout>

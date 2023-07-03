@@ -127,7 +127,7 @@
                     android:text="@string/btn_piramide"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    app:icon="@drawable/piramide"
+                    app:icon="@drawable/piramide_triangular"
                     app:iconGravity="textTop"
                     app:iconTint="@color/white" />
 
