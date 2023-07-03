@@ -65,16 +65,25 @@ public class Activity_circulo extends Activity_AreayPerimetro{
     }
 
     public String calcular(){
-        //convertir a cadena objetos capturados
-        String valor1_circulo_radio = txt_circulo_radio.getText().toString();
-        //string a double- parseo
-        Double valor1_double = Double.parseDouble(valor1_circulo_radio);
+        //covertimos los valores a Double
+        Double valor1_double;
+        if(txt_circulo_radio.getText().toString().isEmpty()){
+            valor1_double=0.0;
+        }else{
+            valor1_double=Double.parseDouble(txt_circulo_radio.getText().toString());
+        }
+
         //creamos variable resultado a tipo cadena
         String resultado ="";
         //operamos con checkbox
+
+        if(cbox_area_circulo.isChecked()==false && cbox_perimetro_circulo.isChecked()==false){
+            return resultado="Seleccione una opcion";
+        }
         if(cbox_area_circulo.isChecked()==true){
             resultado = "El área es: "+ CalcularArea(valor1_double);
-        }if(cbox_perimetro_circulo.isChecked()==true){
+        }
+        if(cbox_perimetro_circulo.isChecked()==true){
             resultado = resultado+"\nEl perímetro es: "+CalcularPerimetro(valor1_double);
         }
         return resultado;

@@ -82,15 +82,15 @@ public class Activity_triangular extends AppCompatActivity {
             ladob_triangular_double=Double.parseDouble(txt_ladob_triangular.getText().toString());
         }
 
-        if(rb_area_triangular.isSelected()==false && rb_volumen_triangular.isSelected()==false){
+        if(rb_area_triangular.isChecked()==false && rb_volumen_triangular.isChecked()==false){
             return resultado="Seleccione una opcion";
         }
 
         //operamos con radioButton
-        if(rb_area_triangular.isSelected()==true){
+        if(rb_area_triangular.isChecked()==true){
             resultado = "El área de la superficie es: "+ CalcularArea(altura_triangular_double,ladoa_triangular_double,ladob_triangular_double);
         }
-        if(rb_volumen_triangular.isSelected()==true){
+        if(rb_volumen_triangular.isChecked()==true){
             resultado = resultado+"\nEl Volumen es: "+CalcularVolumen(altura_triangular_double,ladoa_triangular_double,ladob_triangular_double);
         }
         return resultado;
@@ -109,8 +109,8 @@ public class Activity_triangular extends AppCompatActivity {
         txt_ladob_triangular.setText("");
         txt_ladoa_triangular.setText("");
         txt_altura_triangular.setText("");
-        rb_volumen_triangular.setSelected(false);
-        rb_area_triangular.setSelected(false);
+        rb_volumen_triangular.setChecked(false);
+        rb_area_triangular.setChecked(false);
     }
 
 

@@ -74,13 +74,13 @@ public class Activity_cubo extends AppCompatActivity {
         //creamos variable resultado a tipo cadena
         String resultado ="";
         //operamos con checkbox
-        if(rb_area_cubo.isSelected()==false && rb_volumen_cubo.isSelected()==false){
+        if(rb_area_cubo.isChecked()==false && rb_volumen_cubo.isChecked()==false){
             return resultado="Seleccione una opcion";
         }
-        if (rb_area_cubo.isSelected()==true) {
+        if (rb_area_cubo.isChecked()==true) {
             resultado = "El área es: "+ CalcularArea(ladoCuboDouble);
         }
-        if(rb_volumen_cubo.isSelected()==true) {
+        if(rb_volumen_cubo.isChecked()==true) {
             resultado = resultado + "\nEl Volumen es: " + CalcularVolumen(ladoCuboDouble);
         }
         return resultado;
@@ -95,8 +95,8 @@ public class Activity_cubo extends AppCompatActivity {
     }
     public void Limpiar(View view){
         lado_cubo.setText("");
-        rb_volumen_cubo.setSelected(false);
-        rb_area_cubo.setSelected(false);
+        rb_volumen_cubo.setChecked(false);
+        rb_area_cubo.setChecked(false);
     }
 
 

@@ -67,14 +67,22 @@ public class Activity_rectangulo extends Activity_AreayPerimetro {
     }
     public String calcular(){
         //convertir a cadena objetos capturados
-        String valor1_rectangulo_lado = txt_rectangulo_base.getText().toString();
-        String valor2_rectangulo_lado = txt_rectangulo_altura.getText().toString();
         //string a double- parseo
-        Double valor1_double = Double.parseDouble(valor1_rectangulo_lado);
-        Double valor2_double = Double.parseDouble(valor2_rectangulo_lado);
+        Double valor1_double;
+        Double valor2_double;
+        if(txt_rectangulo_base.getText().toString().isEmpty() || txt_rectangulo_altura.getText().toString().isEmpty()){
+            valor1_double=0.0;
+            valor2_double=0.0;
+        }else {
+            valor1_double = Double.parseDouble(txt_rectangulo_base.getText().toString());
+            valor2_double = Double.parseDouble(txt_rectangulo_altura.getText().toString());
+        }
         //creamos variable resultado a tipo cadena
         String resultado ="";
         //operamos con checkbox
+        if(cbox_area_rectangulo.isChecked()==false && cbox_perimetro_rectangulo.isChecked()==false){
+            return resultado="Seleccione una opcion";
+        }
         if(cbox_area_rectangulo.isChecked()==true){
             resultado = "El área es: "+ CalcularArea(valor1_double,valor2_double);
         }if(cbox_perimetro_rectangulo.isChecked()==true){

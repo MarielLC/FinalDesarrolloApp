@@ -65,12 +65,21 @@ public class Activity_Hexagono extends Activity_AreayPerimetro {
     }
     public String calcular(){
         //convertir a cadena objetos capturados
-        String valor1_hexagono_lado = txt_hexagono_lado.getText().toString();
         //string a double- parseo
-        Double valor1_double = Double.parseDouble(valor1_hexagono_lado);
+        Double valor1_double;
+        if(txt_hexagono_lado.getText().toString().isEmpty()){
+            valor1_double=0.0;
+        }else{
+            valor1_double=Double.parseDouble(txt_hexagono_lado.getText().toString());
+        }
+
+
         //creamos variable resultado a tipo cadena
         String resultado ="";
         //operamos con checkbox
+        if(cbox_area_hexagono.isChecked()==false && cbox_perimetro_hexagono.isChecked()==true){
+            return resultado="Seleccione una opcion";
+        }
         if(cbox_area_hexagono.isChecked()==true){
             resultado = "El área es: "+ CalcularArea(valor1_double);
         }if(cbox_perimetro_hexagono.isChecked()==true){

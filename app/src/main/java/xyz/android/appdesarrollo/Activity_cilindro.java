@@ -77,14 +77,14 @@ public class Activity_cilindro extends AppCompatActivity {
             altura_cilindro_double=Double.parseDouble(txt_altura_cilindro.getText().toString());
         }
 
-        if(rb_volumen_cilindro.isSelected()==false && rb_area_cilindro.isSelected()==false){
+        if(rb_volumen_cilindro.isChecked()==false && rb_area_cilindro.isChecked()==false){
             return resultado="Seleccione una opcion";
         }
 
         //operamos con radioButton
-        if(rb_area_cilindro.isSelected()==true){
+        if(rb_area_cilindro.isChecked()==true){
             resultado = "El área de la superficie es: "+ CalcularArea(radio_cilindro_double,altura_cilindro_double);
-        }if(rb_volumen_cilindro.isSelected()==true){
+        }if(rb_volumen_cilindro.isChecked()==true){
             resultado = resultado+"\nEl Volumen es: "+CalcularVolumen(radio_cilindro_double,altura_cilindro_double);
         }
         return resultado;
@@ -101,8 +101,8 @@ public class Activity_cilindro extends AppCompatActivity {
     public void Limpiar(View view){
         txt_radio_cilindro.setText("");
         txt_altura_cilindro.setText("");
-        rb_area_cilindro.setSelected(false);
-        rb_volumen_cilindro.setSelected(false);
+        rb_area_cilindro.setChecked(false);
+        rb_volumen_cilindro.setChecked(false);
     }
 
 }
