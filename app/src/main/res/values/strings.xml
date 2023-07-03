@@ -33,10 +33,10 @@
     <string name="formula_volumen_esfera">V=(4/3)πr³</string>
     <string name="formula_area_piramide">A=l²+2lx</string>
     <string name="formula_volumen_piramide">V=(1/3)l²h</string>
-    <string name="formula_area_cono">A=πR(R+a)</string>
-    <string name="formula_volumen_cono">V=(πhR²)/3</string>
-    <string name="formula_area_triangular">A=Pbase*H+2Abase</string>
-    <string name="formula_volumen_triangular">V=(area_base)H</string>
+    <string name="formula_area_cono">A=πr(r+a)</string>
+    <string name="formula_volumen_cono">V=(πhr²)/3</string>
+    <string name="formula_area_triangular">A=Pbase*h+2Abase</string>
+    <string name="formula_volumen_triangular">V=(area_base)h</string>
 
     <string name="btn_cubo">Cubo</string>
     <string name="btn_cilindro">Cilindro</string>
