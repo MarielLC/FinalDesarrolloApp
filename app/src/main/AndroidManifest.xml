@@ -13,9 +13,6 @@
         android:theme="@style/Theme.AppDesarrollo"
         tools:targetApi="31" >
         <activity
-            android:name=".operaciones_matrices"
-            android:exported="false" />
-        <activity
             android:name=".Activity_registrarse"
             android:exported="false" >
             <meta-data
